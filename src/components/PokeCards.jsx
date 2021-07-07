@@ -30,7 +30,7 @@ export const PokeList = (pokemons) => {
         <>
           <h1>{name}</h1>
           {spritesFront ? (
-            <a href={videoLink}>
+            <a href={videoLink} target="_blank" rel="noopener noreferrer">
               <img
                 id="poke-img"
                 className="card-img"
@@ -41,7 +41,7 @@ export const PokeList = (pokemons) => {
               />
             </a>
           ) : (
-            <a href={videoLink}>
+            <a href={videoLink} target="_blank" rel="noopener noreferrer">
               <img
                 id="poke-img"
                 className="card-img"
