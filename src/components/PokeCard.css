@@ -1,0 +1,25 @@
+.card-container {
+  width: 20em;
+  height: 25em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 60px;
+  grid-gap: 2rem;
+  margin: 5rem 10vw;
+  padding: 0;
+  text-align: center;
+  background: rgb(231, 28, 28);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+
+.card-img {
+  padding: 2em;
+  width: 7em;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
