@@ -13,8 +13,9 @@ export default function App() {
       <h1>Pokemon information</h1>
       {pokemons.map((pokemon, index) => (
         <div className="card-container">
-          <div className="child-container" key={pokemon.id}>
+          <div className="child-container">
             <PokeList
+              key={pokemon.id}
               name={pokemon.name}
               spritesFront={pokemon.sprites.front_default}
               spritesFront2={pokemon.sprites.front_shiny}

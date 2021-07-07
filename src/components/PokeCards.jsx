@@ -3,7 +3,26 @@ import "./PokeCard.css";
 
 export const PokeList = (pokemons) => {
   console.log("pokemon", pokemons);
-  const { name, spritesFront, spritesBack, videoLink } = pokemons;
+  const {
+    name,
+    spritesFront,
+    spritesFront2,
+    spritesBack,
+    spritesBack2,
+    videoLink
+  } = pokemons;
+
+  function over(e) {
+    spritesFront
+      ? (e.currentTarget.src = spritesFront2)
+      : (e.currentTarget.src = spritesBack2);
+  }
+
+  function out(e) {
+    spritesFront2
+      ? (e.currentTarget.src = spritesFront)
+      : (e.currentTarget.src = spritesBack);
+  }
 
   return (
     <div>
@@ -12,11 +31,25 @@ export const PokeList = (pokemons) => {
           <h1>{name}</h1>
           {spritesFront ? (
             <a href={videoLink}>
-              <img className="card-img" src={spritesFront} alt="" />
+              <img
+                id="poke-img"
+                className="card-img"
+                onMouseOver={over}
+                onMouseOut={out}
+                src={spritesFront}
+                alt=""
+              />
             </a>
           ) : (
             <a href={videoLink}>
-              <img className="card-img" src={spritesBack} alt="" />
+              <img
+                id="poke-img"
+                className="card-img"
+                onMouseOver={over}
+                onMouseOut={out}
+                src={spritesBack}
+                alt=""
+              />
             </a>
           )}
         </>
